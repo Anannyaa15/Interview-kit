@@ -1,0 +1,1 @@
+export type CoverageRequirement={id:string;priority:'must'|'nice'};export type CoverageQuestion={requirement_ids:string[]};export function findCoverageGaps(requirements:CoverageRequirement[],questions:CoverageQuestion[]){const covered=new Set(questions.flatMap(q=>q.requirement_ids));return requirements.filter(r=>r.priority==='must'&&!covered.has(r.id)).map(r=>r.id)}

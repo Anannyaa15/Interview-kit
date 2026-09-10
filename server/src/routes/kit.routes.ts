@@ -1,0 +1,13 @@
+import {Router} from 'express';
+import {createKit,getKit,listKits,getKitStatus,updateKit,regenerateSection,recordPractice} from '../controllers/kit.controller.js';
+import {requireAuth} from '../middleware/auth.js';
+const router=Router();
+router.use(requireAuth);
+router.get('/',listKits);
+router.post('/',createKit);
+router.get('/:id/status',getKitStatus);
+router.patch('/:id',updateKit);
+router.post('/:id/regenerate',regenerateSection);
+router.post('/:id/practice/:flashcardId',recordPractice);
+router.get('/:id',getKit);
+export default router;

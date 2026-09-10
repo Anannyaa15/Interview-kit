@@ -1,0 +1,6 @@
+{"name":"interview-prep-kit","private":true,"scripts":{
+    "dev":"concurrently \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "build":"npm --prefix server run build && npm --prefix client run build",
+    "test":"npm --prefix server test",
+    "evaluate": "npm --prefix server run evaluate --"},
+    "devDependencies":{"concurrently":"^9.2.1"}}

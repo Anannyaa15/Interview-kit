@@ -1,0 +1,1 @@
+import {describe,expect,it} from 'vitest';import {findCoverageGaps} from '../coverage.service.js';describe('coverage',()=>{it('finds uncovered must requirements',()=>{expect(findCoverageGaps([{id:'r1',priority:'must'},{id:'r2',priority:'must'},{id:'r3',priority:'nice'}],[{requirement_ids:['r1']},{requirement_ids:['r3']}])).toEqual(['r2'])})});

@@ -1,0 +1,2 @@
+import type {Response,NextFunction} from 'express';import jwt from 'jsonwebtoken';import {env} from '../config/env.js';import type {AuthRequest} from '../types/auth.js';
+export function requireAuth(req:AuthRequest,res:Response,next:NextFunction){const token=req.cookies?.session;if(!token)return res.status(401).json({message:'Authentication required.'});try{const p=jwt.verify(token,env.jwtSecret) as {userId:string};req.userId=p.userId;next()}catch{return res.status(401).json({message:'Session expired or invalid.'})}}

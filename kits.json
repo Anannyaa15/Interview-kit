@@ -1,0 +1,688 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-09-10T11:01:50.412Z",
+  "kits": [
+    {
+      "id": "case-1",
+      "status": "ok",
+      "kit": {
+        "source": {
+          "company_url": "https://example.com",
+          "jd_chars": 171,
+          "pages_used": [
+            "https://example.com/"
+          ],
+          "company": "example",
+          "location": "",
+          "role": "Software Engineer",
+          "researched_at": "2026-09-10T11:01:50.269Z"
+        },
+        "company_brief": {
+          "summary": "Information about a real company is missing. The provided URL, example.com, is an example domain intended for documentation and not for operational use.",
+          "what_they_do": "There is no information available about what a real company at example.com does, as it is an example domain for documentation purposes.",
+          "sources": [
+            "https://example.com/"
+          ]
+        },
+        "role": {
+          "title": "Software Engineer",
+          "seniority": "",
+          "responsibilities": [],
+          "requirements": [
+            {
+              "id": "r1",
+              "text": "experience in JavaScript",
+              "kind": "technical",
+              "priority": "must"
+            },
+            {
+              "id": "r2",
+              "text": "experience in React",
+              "kind": "technical",
+              "priority": "must"
+            },
+            {
+              "id": "r3",
+              "text": "experience in Node.js",
+              "kind": "technical",
+              "priority": "must"
+            },
+            {
+              "id": "r4",
+              "text": "experience in REST APIs",
+              "kind": "technical",
+              "priority": "must"
+            },
+            {
+              "id": "r5",
+              "text": "experience in MongoDB",
+              "kind": "technical",
+              "priority": "must"
+            },
+            {
+              "id": "r6",
+              "text": "Strong problem-solving skills",
+              "kind": "behavioural",
+              "priority": "must"
+            },
+            {
+              "id": "r7",
+              "text": "communication skills",
+              "kind": "behavioural",
+              "priority": "must"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "id": "q1",
+            "requirement_ids": [
+              "r1"
+            ],
+            "category": "technical",
+            "prompt": "Explain what closures are in JavaScript and provide a practical example of their use.",
+            "answer_outline": "Definition: A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). Closures give you access to an outer function's scope from an inner function. Practical examples include data privacy (module pattern), currying, and maintaining state in event handlers.",
+            "difficulty": 2,
+            "state": "generated"
+          },
+          {
+            "id": "q2",
+            "requirement_ids": [
+              "r2"
+            ],
+            "category": "technical",
+            "prompt": "Differentiate between state and props in React. When would you use one over the other?",
+            "answer_outline": "Props (properties) are immutable, passed from parent to child components, and used for configuration or data that doesn't change within the component. State is mutable, managed internally by a component, and used for data that changes over time due to user interaction or other events. Use props for static data or data flowing down the component tree; use state for interactive data that needs to be updated within the component itself.",
+            "difficulty": 1,
+            "state": "generated"
+          },
+          {
+            "id": "q3",
+            "requirement_ids": [
+              "r3"
+            ],
+            "category": "technical",
+            "prompt": "Describe the Node.js event loop. How does it enable non-blocking I/O?",
+            "answer_outline": "The Node.js event loop is a single-threaded, non-blocking I/O model that allows Node.js to handle many concurrent operations. It continuously checks the call stack, microtask queue (promises, process.nextTick), and macrotask queue (timers, I/O, poll, check, close callbacks). Non-blocking I/O is achieved by offloading I/O operations to the operating system or a worker pool, registering callbacks, and continuing execution of other JavaScript code instead of waiting for the I/O to complete. Once an I/O operation finishes, its callback is placed in the event queue to be processed by the event loop.",
+            "difficulty": 3,
+            "state": "generated"
+          },
+          {
+            "id": "q4",
+            "requirement_ids": [
+              "r4"
+            ],
+            "category": "technical",
+            "prompt": "What does it mean for a REST API endpoint to be 'idempotent'? Provide examples of HTTP methods that are typically idempotent and non-idempotent.",
+            "answer_outline": "An idempotent operation is one that produces the same result whether it is executed once or multiple times. In the context of REST APIs, an idempotent endpoint means that making the same request multiple times will have the same effect on the server's state as making it once. Idempotent methods: GET (retrieves data), PUT (replaces a resource), DELETE (removes a resource). Non-idempotent methods: POST (typically creates a new resource each time). Idempotency is crucial for reliability in distributed systems, as it allows clients to safely retry requests.",
+            "difficulty": 2,
+            "state": "generated"
+          },
+          {
+            "id": "q5",
+            "requirement_ids": [
+              "r5"
+            ],
+            "category": "technical",
+            "prompt": "Compare and contrast MongoDB (a NoSQL document database) with traditional relational databases. When would you choose MongoDB over a relational database?",
+            "answer_outline": "MongoDB is a document-oriented NoSQL database, offering a flexible schema, horizontal scalability, and high performance for large data volumes. Relational databases (e.g., PostgreSQL, MySQL) are table-oriented, enforce a rigid schema, and prioritize ACID compliance for complex transactions. Choose MongoDB when: data structure is evolving rapidly, need for high scalability and availability, handling large amounts of unstructured or semi-structured data, or when a denormalized data model fits the application's access patterns better. Choose relational for applications requiring strong transactional consistency, complex joins, and a highly structured data model.",
+            "difficulty": 2,
+            "state": "generated"
+          },
+          {
+            "id": "q6",
+            "requirement_ids": [
+              "r1",
+              "r2"
+            ],
+            "category": "technical",
+            "prompt": "Explain the benefits of using React Hooks over class components for managing state and side effects. Provide an example of `useState` and `useEffect`.",
+            "answer_outline": "React Hooks allow functional components to use state and other React features without writing a class. Benefits include: cleaner, more readable code (less boilerplate), easier reuse of stateful logic, better separation of concerns, and avoiding `this` binding issues. `useState` allows adding state to functional components (e.g., `const [count, setCount] = useState(0);`). `useEffect` allows performing side effects (data fetching, subscriptions, manual DOM manipulations) in functional components (e.g., `useEffect(() => { document.title = `You clicked ${count} times`; }, [count]);`).",
+            "difficulty": 2,
+            "state": "generated"
+          },
+          {
+            "id": "q7",
+            "requirement_ids": [
+              "r3",
+              "r4"
+            ],
+            "category": "technical",
+            "prompt": "How would you implement robust error handling in a Node.js REST API using middleware? Provide a conceptual code snippet.",
+            "answer_outline": "Robust error handling in Node.js (e.g., with Express) involves a centralized error-handling middleware. This middleware should be the last `app.use()` call. Errors from routes or other middleware can be caught using `try-catch` blocks or by passing them to the `next()` function (e.g., `next(error)`). The error-handling middleware then logs the error, determines an appropriate HTTP status code (e.g., 500 for internal server errors, 404 for not found), and sends a user-friendly error response to the client. Example: `app.use((err, req, res, next) => { console.error(err.stack); res.status(err.statusCode || 500).send({ message: err.message || 'Something broke!' }); });`",
+            "difficulty": 3,
+            "state": "generated"
+          },
+          {
+            "id": "q8",
+            "requirement_ids": [
+              "r3",
+              "r5"
+            ],
+            "category": "technical",
+            "prompt": "When designing a schema for a Node.js application using MongoDB, what are the key considerations for embedding vs. referencing documents? Provide an example scenario where embedding would be preferred.",
+            "answer_outline": "Key considerations for embedding vs. referencing in MongoDB include: data access patterns (how data is queried), data duplication, atomicity of updates, and document size limits. Embedding stores related data within a single document, reducing the need for joins and improving read performance for frequently accessed, tightly coupled data. Referencing stores related data in separate documents and links them using IDs, suitable for large, frequently updated, or less frequently accessed related data. Embedding is preferred when: there's a 'contains' relationship, data is accessed together, and the embedded data doesn't grow unbounded (e.g., embedding comments directly within a blog post document if comments are always displayed with the post and there aren't millions of them per post).",
+            "difficulty": 3,
+            "state": "generated"
+          },
+          {
+            "id": "q9",
+            "requirement_ids": [
+              "r2",
+              "r4"
+            ],
+            "category": "technical",
+            "prompt": "Describe different strategies for fetching data from a REST API in a React application. Discuss the pros and cons of at least two approaches (e.g., `useEffect` with `fetch`/`axios`, React Query/SWR).",
+            "answer_outline": "1. `useEffect` with `fetch`/`axios`: This is a manual approach where `fetch` or `axios` is used inside a `useEffect` hook. Pros: Full control, no extra dependencies for `fetch`. Cons: Requires manual handling of loading/error states, caching, re-fetching, and potential race conditions. 2. Dedicated data fetching libraries (e.g., React Query, SWR): These libraries provide hooks for data fetching. Pros: Automatic caching, revalidation, background fetching, error handling, optimistic updates, and built-in loading states. Significantly reduces boilerplate. Cons: Adds a new dependency and a learning curve. Choose `useEffect` for simple, one-off fetches; choose libraries for complex applications requiring robust data management, caching, and performance optimizations.",
+            "difficulty": 2,
+            "state": "generated"
+          },
+          {
+            "id": "q10",
+            "requirement_ids": [
+              "r1",
+              "r2",
+              "r3",
+              "r4",
+              "r5"
+            ],
+            "category": "technical",
+            "prompt": "Outline the end-to-end flow for user authentication (e.g., login, registration) in a full-stack application using React for the frontend, Node.js/Express for the backend, and MongoDB for data storage. Mention key security considerations.",
+            "answer_outline": "1. **Registration**: React frontend sends user credentials (username, password) to Node.js backend via a REST API (POST /register). Backend hashes the password (e.g., with bcrypt), stores user data (username, hashed password) in MongoDB, and returns a success response. 2. **Login**: React frontend sends credentials to Node.js backend (POST /login). Backend retrieves user from MongoDB, compares hashed password, and if valid, generates a JSON Web Token (JWT) or session ID. This token/ID is sent back to the frontend (e.g., in an HTTP-only cookie or local storage). 3. **Authenticated Requests**: Frontend includes the token in subsequent requests (e.g., in Authorization header). Backend middleware verifies the token before granting access to protected routes. Key security considerations: HTTPS for all communication, strong password hashing (never store plain passwords), JWT/session security (expiration, refresh tokens, secure/HTTP-only cookies), input validation to prevent injection attacks, rate limiting on authentication endpoints, and proper error handling without revealing sensitive information.",
+            "difficulty": 3,
+            "state": "generated"
+          },
+          {
+            "id": "q11",
+            "requirement_ids": [
+              "r6"
+            ],
+            "category": "behavioural",
+            "prompt": "Tell me about a time you faced a significant challenge or problem at work. How did you approach solving it, and what was the outcome?",
+            "answer_outline": "Describe the problem clearly, including its complexity or impact. Explain the steps you took to analyze the situation, identify potential solutions, and make a decision. Detail the actions you implemented, any obstacles you encountered, and how you overcame them. Conclude with the final outcome and what you learned from the experience.",
+            "difficulty": 2,
+            "state": "generated"
+          },
+          {
+            "id": "q12",
+            "requirement_ids": [
+              "r7"
+            ],
+            "category": "behavioural",
+            "prompt": "Describe a situation where you had to communicate complex information to a non-technical audience or someone unfamiliar with the subject matter. How did you ensure your message was understood?",
+            "answer_outline": "Set the context of the complex information and the specific audience. Explain the strategies you used to simplify and convey the message (e.g., analogies, visual aids, breaking it down into smaller parts). Describe how you checked for understanding (e.g., asking questions, seeking feedback) and adapted your communication if needed. Discuss the outcome and the effectiveness of your communication.",
+            "difficulty": 2,
+            "state": "generated"
+          },
+          {
+            "id": "q13",
+            "requirement_ids": [
+              "r6",
+              "r7"
+            ],
+            "category": "behavioural",
+            "prompt": "Can you share an experience where a miscommunication led to a problem, and how you resolved it, ensuring better communication moving forward?",
+            "answer_outline": "Describe the initial miscommunication and the specific problem it caused. Explain the steps you took to identify the root cause of the miscommunication and address the immediate issue. Detail how you proactively implemented solutions or processes to prevent similar miscommunications in the future, demonstrating both problem-solving and improved communication strategies. Discuss the positive impact of your actions.",
+            "difficulty": 3,
+            "state": "generated"
+          },
+          {
+            "id": "q14",
+            "requirement_ids": [
+              "r1",
+              "r2",
+              "r3",
+              "r4",
+              "r5"
+            ],
+            "category": "system-design",
+            "prompt": "Design a real-time chat application that supports one-on-one and group conversations. Consider how users will connect, send messages, and how message history will be stored and retrieved.",
+            "answer_outline": "Discuss frontend (React components, state management), backend (Node.js with WebSockets like Socket.IO), database (MongoDB for message storage, user profiles), API design (REST for user management, initial data load), scalability considerations (horizontal scaling for Node.js, MongoDB replication/sharding), and security.",
+            "difficulty": 3,
+            "state": "generated"
+          },
+          {
+            "id": "q15",
+            "requirement_ids": [
+              "r1",
+              "r2",
+              "r3",
+              "r4",
+              "r5"
+            ],
+            "category": "system-design",
+            "prompt": "Design the architecture for an e-commerce product catalog system. This system should allow administrators to add/update products and users to browse and search for products. Focus on the API design, data model, and frontend interaction.",
+            "answer_outline": "Outline the frontend (React components for product display, search, admin forms), backend (Node.js services for product CRUD), API endpoints (RESTful design for products, categories), database schema (MongoDB document structure for products, categories), search functionality (e.g., text search in MongoDB or integration with a dedicated search engine), and caching strategies.",
+            "difficulty": 2,
+            "state": "generated"
+          },
+          {
+            "id": "q16",
+            "requirement_ids": [
+              "r1",
+              "r2",
+              "r3",
+              "r4",
+              "r5"
+            ],
+            "category": "system-design",
+            "prompt": "Describe how you would design a robust user authentication and authorization system for a web application, leveraging Node.js, React, and MongoDB. Include considerations for secure password storage, session management, and role-based access control.",
+            "answer_outline": "Explain user registration/login flow (React forms, Node.js API), password hashing (e.g., bcrypt), token-based authentication (JWT), storing user data and roles in MongoDB, implementing middleware in Node.js for route protection, and how React would handle tokens and display UI based on user roles.",
+            "difficulty": 2,
+            "state": "generated"
+          },
+          {
+            "id": "q17",
+            "requirement_ids": [
+              "r1",
+              "r3",
+              "r5"
+            ],
+            "category": "system-design",
+            "prompt": "Imagine you have a successful web application built with Node.js, React, and MongoDB, and it's experiencing significant traffic growth. How would you approach scaling this application to handle millions of concurrent users and large data volumes?",
+            "answer_outline": "Discuss scaling strategies for each component: Node.js (clustering, load balancing, microservices), MongoDB (replication, sharding, indexing), frontend (CDN for React assets, client-side caching), API gateway, caching layers (e.g., Redis), message queues for background tasks, and monitoring.",
+            "difficulty": 3,
+            "state": "generated"
+          },
+          {
+            "id": "q18",
+            "requirement_ids": [
+              "r1",
+              "r3",
+              "r4"
+            ],
+            "category": "system-design",
+            "prompt": "If you were to break down a monolithic Node.js application into several microservices, how would you design an API Gateway to manage requests from a React frontend to these services?",
+            "answer_outline": "Explain the role of an API Gateway (request routing, authentication/authorization, rate limiting, logging, caching). Discuss technologies (e.g., Nginx, Express.js as a gateway, or dedicated solutions). Describe how the React frontend would interact with the single entry point, and how the gateway would fan out requests to different Node.js microservices.",
+            "difficulty": 3,
+            "state": "generated"
+          },
+          {
+            "id": "q19",
+            "requirement_ids": [
+              "r1",
+              "r2",
+              "r3",
+              "r4",
+              "r5",
+              "r6"
+            ],
+            "category": "company-fit",
+            "prompt": "Tell me about a time you had to quickly learn a new technology (e.g., a specific JavaScript library, a React pattern, a Node.js framework, a REST API design principle, or a MongoDB feature) to solve a problem. How did you approach learning it, and what was the outcome?",
+            "answer_outline": "Candidate should describe a specific situation, the technology learned, their learning process (e.g., documentation, tutorials, experimentation), the problem solved, and the positive outcome. Look for initiative, adaptability, and effective problem-solving.",
+            "difficulty": 2,
+            "state": "generated"
+          },
+          {
+            "id": "q20",
+            "requirement_ids": [
+              "r1",
+              "r2",
+              "r3",
+              "r7"
+            ],
+            "category": "company-fit",
+            "prompt": "Describe a project where you had to collaborate closely with a team, leveraging your JavaScript, React, or Node.js skills. How did you ensure effective communication within the team, especially when facing technical disagreements or challenges?",
+            "answer_outline": "Candidate should provide an example of teamwork, highlighting their role and contributions. Focus on how they communicated technical ideas, resolved conflicts, and contributed to a positive team dynamic. Look for active listening, clarity, and empathy.",
+            "difficulty": 2,
+            "state": "generated"
+          },
+          {
+            "id": "q21",
+            "requirement_ids": [
+              "r4",
+              "r5",
+              "r6"
+            ],
+            "category": "company-fit",
+            "prompt": "Can you describe a particularly challenging technical problem you encountered while designing a REST API or working with MongoDB? How did you diagnose the issue, explore solutions, and ultimately resolve it? What did you learn from that experience?",
+            "answer_outline": "Candidate should detail a specific technical challenge, their systematic approach to problem-solving (e.g., debugging, research, testing), the steps taken, and the final resolution. Emphasize the learning aspect and their resilience.",
+            "difficulty": 3,
+            "state": "generated"
+          },
+          {
+            "id": "q22",
+            "requirement_ids": [
+              "r1",
+              "r2",
+              "r3"
+            ],
+            "category": "company-fit",
+            "prompt": "What aspects of working with JavaScript, React, and Node.js do you find most engaging or exciting? How do you stay current with the rapidly evolving ecosystem of these technologies?",
+            "answer_outline": "Candidate should express genuine interest and enthusiasm for the core technologies. They should describe their methods for continuous learning (e.g., blogs, conferences, open-source contributions, personal projects) and demonstrate a proactive approach to professional development.",
+            "difficulty": 2,
+            "state": "generated"
+          },
+          {
+            "id": "q23",
+            "requirement_ids": [
+              "r7",
+              "r6"
+            ],
+            "category": "company-fit",
+            "prompt": "Tell me about a time you received constructive feedback on your technical approach or communication style from a colleague or manager. How did you process that feedback, and what actions did you take to incorporate it into your work?",
+            "answer_outline": "Candidate should provide an example of receiving feedback, demonstrate self-awareness and a willingness to learn. They should explain how they analyzed the feedback, planned improvements, and implemented changes, showing a growth mindset and good communication skills.",
+            "difficulty": 2,
+            "state": "generated"
+          }
+        ],
+        "flashcards": [
+          {
+            "id": "f1",
+            "front": "Explain what closures are in JavaScript and provide a practical example of their use.",
+            "back": "Definition: A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). Closures give you access to an outer function's scope from an inner function. Practical examples include data privacy (module pattern), currying, and maintaining state in event handlers.",
+            "requirement_ids": [
+              "r1"
+            ],
+            "state": "generated"
+          },
+          {
+            "id": "f2",
+            "front": "Differentiate between state and props in React. When would you use one over the other?",
+            "back": "Props (properties) are immutable, passed from parent to child components, and used for configuration or data that doesn't change within the component. State is mutable, managed internally by a component, and used for data that changes over time due to user interaction or other events. Use props for static data or data flowing down the component tree; use state for interactive data that needs to be updated within the component itself.",
+            "requirement_ids": [
+              "r2"
+            ],
+            "state": "generated"
+          },
+          {
+            "id": "f3",
+            "front": "Describe the Node.js event loop. How does it enable non-blocking I/O?",
+            "back": "The Node.js event loop is a single-threaded, non-blocking I/O model that allows Node.js to handle many concurrent operations. It continuously checks the call stack, microtask queue (promises, process.nextTick), and macrotask queue (timers, I/O, poll, check, close callbacks). Non-blocking I/O is achieved by offloading I/O operations to the operating system or a worker pool, registering callbacks, and continuing execution of other JavaScript code instead of waiting for the I/O to complete. Once an I/O operation finishes, its callback is placed in the event queue to be processed by the event loop.",
+            "requirement_ids": [
+              "r3"
+            ],
+            "state": "generated"
+          },
+          {
+            "id": "f4",
+            "front": "What does it mean for a REST API endpoint to be 'idempotent'? Provide examples of HTTP methods that are typically idempotent and non-idempotent.",
+            "back": "An idempotent operation is one that produces the same result whether it is executed once or multiple times. In the context of REST APIs, an idempotent endpoint means that making the same request multiple times will have the same effect on the server's state as making it once. Idempotent methods: GET (retrieves data), PUT (replaces a resource), DELETE (removes a resource). Non-idempotent methods: POST (typically creates a new resource each time). Idempotency is crucial for reliability in distributed systems, as it allows clients to safely retry requests.",
+            "requirement_ids": [
+              "r4"
+            ],
+            "state": "generated"
+          },
+          {
+            "id": "f5",
+            "front": "Compare and contrast MongoDB (a NoSQL document database) with traditional relational databases. When would you choose MongoDB over a relational database?",
+            "back": "MongoDB is a document-oriented NoSQL database, offering a flexible schema, horizontal scalability, and high performance for large data volumes. Relational databases (e.g., PostgreSQL, MySQL) are table-oriented, enforce a rigid schema, and prioritize ACID compliance for complex transactions. Choose MongoDB when: data structure is evolving rapidly, need for high scalability and availability, handling large amounts of unstructured or semi-structured data, or when a denormalized data model fits the application's access patterns better. Choose relational for applications requiring strong transactional consistency, complex joins, and a highly structured data model.",
+            "requirement_ids": [
+              "r5"
+            ],
+            "state": "generated"
+          },
+          {
+            "id": "f6",
+            "front": "Explain the benefits of using React Hooks over class components for managing state and side effects. Provide an example of `useState` and `useEffect`.",
+            "back": "React Hooks allow functional components to use state and other React features without writing a class. Benefits include: cleaner, more readable code (less boilerplate), easier reuse of stateful logic, better separation of concerns, and avoiding `this` binding issues. `useState` allows adding state to functional components (e.g., `const [count, setCount] = useState(0);`). `useEffect` allows performing side effects (data fetching, subscriptions, manual DOM manipulations) in functional components (e.g., `useEffect(() => { document.title = `You clicked ${count} times`; }, [count]);`).",
+            "requirement_ids": [
+              "r1",
+              "r2"
+            ],
+            "state": "generated"
+          },
+          {
+            "id": "f7",
+            "front": "How would you implement robust error handling in a Node.js REST API using middleware? Provide a conceptual code snippet.",
+            "back": "Robust error handling in Node.js (e.g., with Express) involves a centralized error-handling middleware. This middleware should be the last `app.use()` call. Errors from routes or other middleware can be caught using `try-catch` blocks or by passing them to the `next()` function (e.g., `next(error)`). The error-handling middleware then logs the error, determines an appropriate HTTP status code (e.g., 500 for internal server errors, 404 for not found), and sends a user-friendly error response to the client. Example: `app.use((err, req, res, next) => { console.error(err.stack); res.status(err.statusCode || 500).send({ message: err.message || 'Something broke!' }); });`",
+            "requirement_ids": [
+              "r3",
+              "r4"
+            ],
+            "state": "generated"
+          },
+          {
+            "id": "f8",
+            "front": "When designing a schema for a Node.js application using MongoDB, what are the key considerations for embedding vs. referencing documents? Provide an example scenario where embedding would be preferred.",
+            "back": "Key considerations for embedding vs. referencing in MongoDB include: data access patterns (how data is queried), data duplication, atomicity of updates, and document size limits. Embedding stores related data within a single document, reducing the need for joins and improving read performance for frequently accessed, tightly coupled data. Referencing stores related data in separate documents and links them using IDs, suitable for large, frequently updated, or less frequently accessed related data. Embedding is preferred when: there's a 'contains' relationship, data is accessed together, and the embedded data doesn't grow unbounded (e.g., embedding comments directly within a blog post document if comments are always displayed with the post and there aren't millions of them per post).",
+            "requirement_ids": [
+              "r3",
+              "r5"
+            ],
+            "state": "generated"
+          },
+          {
+            "id": "f9",
+            "front": "Describe different strategies for fetching data from a REST API in a React application. Discuss the pros and cons of at least two approaches (e.g., `useEffect` with `fetch`/`axios`, React Query/SWR).",
+            "back": "1. `useEffect` with `fetch`/`axios`: This is a manual approach where `fetch` or `axios` is used inside a `useEffect` hook. Pros: Full control, no extra dependencies for `fetch`. Cons: Requires manual handling of loading/error states, caching, re-fetching, and potential race conditions. 2. Dedicated data fetching libraries (e.g., React Query, SWR): These libraries provide hooks for data fetching. Pros: Automatic caching, revalidation, background fetching, error handling, optimistic updates, and built-in loading states. Significantly reduces boilerplate. Cons: Adds a new dependency and a learning curve. Choose `useEffect` for simple, one-off fetches; choose libraries for complex applications requiring robust data management, caching, and performance optimizations.",
+            "requirement_ids": [
+              "r2",
+              "r4"
+            ],
+            "state": "generated"
+          },
+          {
+            "id": "f10",
+            "front": "Outline the end-to-end flow for user authentication (e.g., login, registration) in a full-stack application using React for the frontend, Node.js/Express for the backend, and MongoDB for data storage. Mention key security considerations.",
+            "back": "1. **Registration**: React frontend sends user credentials (username, password) to Node.js backend via a REST API (POST /register). Backend hashes the password (e.g., with bcrypt), stores user data (username, hashed password) in MongoDB, and returns a success response. 2. **Login**: React frontend sends credentials to Node.js backend (POST /login). Backend retrieves user from MongoDB, compares hashed password, and if valid, generates a JSON Web Token (JWT) or session ID. This token/ID is sent back to the frontend (e.g., in an HTTP-only cookie or local storage). 3. **Authenticated Requests**: Frontend includes the token in subsequent requests (e.g., in Authorization header). Backend middleware verifies the token before granting access to protected routes. Key security considerations: HTTPS for all communication, strong password hashing (never store plain passwords), JWT/session security (expiration, refresh tokens, secure/HTTP-only cookies), input validation to prevent injection attacks, rate limiting on authentication endpoints, and proper error handling without revealing sensitive information.",
+            "requirement_ids": [
+              "r1",
+              "r2",
+              "r3",
+              "r4",
+              "r5"
+            ],
+            "state": "generated"
+          },
+          {
+            "id": "f11",
+            "front": "Tell me about a time you faced a significant challenge or problem at work. How did you approach solving it, and what was the outcome?",
+            "back": "Describe the problem clearly, including its complexity or impact. Explain the steps you took to analyze the situation, identify potential solutions, and make a decision. Detail the actions you implemented, any obstacles you encountered, and how you overcame them. Conclude with the final outcome and what you learned from the experience.",
+            "requirement_ids": [
+              "r6"
+            ],
+            "state": "generated"
+          },
+          {
+            "id": "f12",
+            "front": "Describe a situation where you had to communicate complex information to a non-technical audience or someone unfamiliar with the subject matter. How did you ensure your message was understood?",
+            "back": "Set the context of the complex information and the specific audience. Explain the strategies you used to simplify and convey the message (e.g., analogies, visual aids, breaking it down into smaller parts). Describe how you checked for understanding (e.g., asking questions, seeking feedback) and adapted your communication if needed. Discuss the outcome and the effectiveness of your communication.",
+            "requirement_ids": [
+              "r7"
+            ],
+            "state": "generated"
+          },
+          {
+            "id": "f13",
+            "front": "Can you share an experience where a miscommunication led to a problem, and how you resolved it, ensuring better communication moving forward?",
+            "back": "Describe the initial miscommunication and the specific problem it caused. Explain the steps you took to identify the root cause of the miscommunication and address the immediate issue. Detail how you proactively implemented solutions or processes to prevent similar miscommunications in the future, demonstrating both problem-solving and improved communication strategies. Discuss the positive impact of your actions.",
+            "requirement_ids": [
+              "r6",
+              "r7"
+            ],
+            "state": "generated"
+          },
+          {
+            "id": "f14",
+            "front": "Design a real-time chat application that supports one-on-one and group conversations. Consider how users will connect, send messages, and how message history will be stored and retrieved.",
+            "back": "Discuss frontend (React components, state management), backend (Node.js with WebSockets like Socket.IO), database (MongoDB for message storage, user profiles), API design (REST for user management, initial data load), scalability considerations (horizontal scaling for Node.js, MongoDB replication/sharding), and security.",
+            "requirement_ids": [
+              "r1",
+              "r2",
+              "r3",
+              "r4",
+              "r5"
+            ],
+            "state": "generated"
+          },
+          {
+            "id": "f15",
+            "front": "Design the architecture for an e-commerce product catalog system. This system should allow administrators to add/update products and users to browse and search for products. Focus on the API design, data model, and frontend interaction.",
+            "back": "Outline the frontend (React components for product display, search, admin forms), backend (Node.js services for product CRUD), API endpoints (RESTful design for products, categories), database schema (MongoDB document structure for products, categories), search functionality (e.g., text search in MongoDB or integration with a dedicated search engine), and caching strategies.",
+            "requirement_ids": [
+              "r1",
+              "r2",
+              "r3",
+              "r4",
+              "r5"
+            ],
+            "state": "generated"
+          },
+          {
+            "id": "f16",
+            "front": "Describe how you would design a robust user authentication and authorization system for a web application, leveraging Node.js, React, and MongoDB. Include considerations for secure password storage, session management, and role-based access control.",
+            "back": "Explain user registration/login flow (React forms, Node.js API), password hashing (e.g., bcrypt), token-based authentication (JWT), storing user data and roles in MongoDB, implementing middleware in Node.js for route protection, and how React would handle tokens and display UI based on user roles.",
+            "requirement_ids": [
+              "r1",
+              "r2",
+              "r3",
+              "r4",
+              "r5"
+            ],
+            "state": "generated"
+          },
+          {
+            "id": "f17",
+            "front": "Imagine you have a successful web application built with Node.js, React, and MongoDB, and it's experiencing significant traffic growth. How would you approach scaling this application to handle millions of concurrent users and large data volumes?",
+            "back": "Discuss scaling strategies for each component: Node.js (clustering, load balancing, microservices), MongoDB (replication, sharding, indexing), frontend (CDN for React assets, client-side caching), API gateway, caching layers (e.g., Redis), message queues for background tasks, and monitoring.",
+            "requirement_ids": [
+              "r1",
+              "r3",
+              "r5"
+            ],
+            "state": "generated"
+          },
+          {
+            "id": "f18",
+            "front": "If you were to break down a monolithic Node.js application into several microservices, how would you design an API Gateway to manage requests from a React frontend to these services?",
+            "back": "Explain the role of an API Gateway (request routing, authentication/authorization, rate limiting, logging, caching). Discuss technologies (e.g., Nginx, Express.js as a gateway, or dedicated solutions). Describe how the React frontend would interact with the single entry point, and how the gateway would fan out requests to different Node.js microservices.",
+            "requirement_ids": [
+              "r1",
+              "r3",
+              "r4"
+            ],
+            "state": "generated"
+          },
+          {
+            "id": "f19",
+            "front": "Tell me about a time you had to quickly learn a new technology (e.g., a specific JavaScript library, a React pattern, a Node.js framework, a REST API design principle, or a MongoDB feature) to solve a problem. How did you approach learning it, and what was the outcome?",
+            "back": "Candidate should describe a specific situation, the technology learned, their learning process (e.g., documentation, tutorials, experimentation), the problem solved, and the positive outcome. Look for initiative, adaptability, and effective problem-solving.",
+            "requirement_ids": [
+              "r1",
+              "r2",
+              "r3",
+              "r4",
+              "r5",
+              "r6"
+            ],
+            "state": "generated"
+          },
+          {
+            "id": "f20",
+            "front": "Describe a project where you had to collaborate closely with a team, leveraging your JavaScript, React, or Node.js skills. How did you ensure effective communication within the team, especially when facing technical disagreements or challenges?",
+            "back": "Candidate should provide an example of teamwork, highlighting their role and contributions. Focus on how they communicated technical ideas, resolved conflicts, and contributed to a positive team dynamic. Look for active listening, clarity, and empathy.",
+            "requirement_ids": [
+              "r1",
+              "r2",
+              "r3",
+              "r7"
+            ],
+            "state": "generated"
+          },
+          {
+            "id": "f21",
+            "front": "Can you describe a particularly challenging technical problem you encountered while designing a REST API or working with MongoDB? How did you diagnose the issue, explore solutions, and ultimately resolve it? What did you learn from that experience?",
+            "back": "Candidate should detail a specific technical challenge, their systematic approach to problem-solving (e.g., debugging, research, testing), the steps taken, and the final resolution. Emphasize the learning aspect and their resilience.",
+            "requirement_ids": [
+              "r4",
+              "r5",
+              "r6"
+            ],
+            "state": "generated"
+          },
+          {
+            "id": "f22",
+            "front": "What aspects of working with JavaScript, React, and Node.js do you find most engaging or exciting? How do you stay current with the rapidly evolving ecosystem of these technologies?",
+            "back": "Candidate should express genuine interest and enthusiasm for the core technologies. They should describe their methods for continuous learning (e.g., blogs, conferences, open-source contributions, personal projects) and demonstrate a proactive approach to professional development.",
+            "requirement_ids": [
+              "r1",
+              "r2",
+              "r3"
+            ],
+            "state": "generated"
+          },
+          {
+            "id": "f23",
+            "front": "Tell me about a time you received constructive feedback on your technical approach or communication style from a colleague or manager. How did you process that feedback, and what actions did you take to incorporate it into your work?",
+            "back": "Candidate should provide an example of receiving feedback, demonstrate self-awareness and a willingness to learn. They should explain how they analyzed the feedback, planned improvements, and implemented changes, showing a growth mindset and good communication skills.",
+            "requirement_ids": [
+              "r7",
+              "r6"
+            ],
+            "state": "generated"
+          }
+        ],
+        "schedule": {
+          "days_available": 5,
+          "days": [
+            {
+              "day": 1,
+              "focus": "Review 5 targeted questions",
+              "question_ids": [
+                "q3",
+                "q14",
+                "q4",
+                "q12",
+                "q22"
+              ],
+              "minutes": 180
+            },
+            {
+              "day": 2,
+              "focus": "Review 5 targeted questions",
+              "question_ids": [
+                "q7",
+                "q17",
+                "q5",
+                "q15",
+                "q23"
+              ],
+              "minutes": 180
+            },
+            {
+              "day": 3,
+              "focus": "Review 5 targeted questions",
+              "question_ids": [
+                "q8",
+                "q18",
+                "q6",
+                "q16",
+                "q2"
+              ],
+              "minutes": 165
+            },
+            {
+              "day": 4,
+              "focus": "Review 4 targeted questions",
+              "question_ids": [
+                "q10",
+                "q21",
+                "q9",
+                "q19"
+              ],
+              "minutes": 150
+            },
+            {
+              "day": 5,
+              "focus": "Review 4 targeted questions",
+              "question_ids": [
+                "q13",
+                "q1",
+                "q11",
+                "q20"
+              ],
+              "minutes": 135
+            }
+          ]
+        },
+        "coverage": {
+          "uncovered_requirement_ids": [],
+          "passes": 1
+        },
+        "practice": []
+      },
+      "error": null
+    }
+  ]
+}
