@@ -4,7 +4,7 @@ import { api } from '../services';
 
 export function CreateKit(){
  const nav=useNavigate(); const[jd,setJd]=useState(''); const[url,setUrl]=useState(''); const[days,setDays]=useState(5); const[error,setError]=useState(''); const[loading,setLoading]=useState(false);
- async function submit(e:FormEvent){e.preventDefault();setLoading(true);setError('');try{const r=await api.post('/api/kits',{jd,company_url:url,days});nav(`/kits/${r.data.kitId}/generating`)}catch(err:any){setError(err.response?.data?.message??'Unable to create kit.')}finally{setLoading(false)}}
+ async function submit(e:FormEvent){e.preventDefault();setLoading(true);setError('');try{const r=await api.post('/kits',{jd,company_url:url,days});nav(`/kits/${r.data.kitId}/generating`)}catch(err:any){setError(err.response?.data?.message??'Unable to create kit.')}finally{setLoading(false)}}
  return <main className="min-h-screen bg-slate-50">
   <header className="border-b border-slate-200/80 bg-white/85 backdrop-blur-xl"><div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4"><Link to="/dashboard" className="text-sm font-semibold text-slate-500 hover:text-slate-900">← Dashboard</Link><span className="flex items-center gap-2 font-bold"><span className="grid h-8 w-8 place-items-center rounded-lg bg-slate-950 text-sm text-cyan-300">✦</span>PrepKit</span></div></header>
   <section className="mx-auto max-w-5xl px-4 py-7 sm:px-6 sm:py-10 lg:py-14">
